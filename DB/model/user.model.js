@@ -1,54 +1,54 @@
-import mongoose , {Schema,model} from 'mongoose'
+import mongoose, { Schema, model } from 'mongoose'
 const userSchema = new Schema({
-    name:{
-        type:String,
-        required:true,
-        unique:true,
+    name: {
+        type: String,
+        required: true,
+        unique: true,
     },
-    email:{
-        type:String,
-        required:true,
-        unique:true,
+    email: {
+        type: String,
+        required: true,
+        unique: true,
     },
-    phone:{
-        type:String,
+    phone: {
+        type: String,
     },
-    password:{
-        type:String,
-        required:true,
+    password: {
+        type: String,
+        required: true,
     },
-    confirmEmail:{
-        type:Boolean,
-        default:false,
+    confirmEmail: {
+        type: Boolean,
+        default: false,
     },
-    image:{
-        type:Object,
+    image: {
+        type: Object,
     },
-    role:{
-        type:String,
-        default:'User',
-        enum:['User','Admin'],
+    role: {
+        type: String,
+        default: 'User',
+        enum: ['User', 'Admin'],
     },
-    status:{
-        type:String,
-        default:'Active',
-        enum:['Active','Not_Active'],
+    status: {
+        type: String,
+        default: 'Active',
+        enum: ['Active', 'Not_Active'],
     },
-    address:{
-        type:String,
+    address: {
+        type: String,
     },
-    gender:{
-        type:String,
-        enum:['Male','Female'],
+    gender: {
+        type: String,
+        enum: ['Male', 'Female'],
     },
-    sendCode:{
-        type:String,
-        default:null,
+    sendCode: {
+        type: String,
+        default: null,
     }
-},{
-    timestamps:true,
+}, {
+    timestamps: true,
 }
 );
 
-const userModel = mongoose.models.User || model('User',userSchema);
+const userModel = mongoose.models.User || model('User', userSchema);
 export default userModel;

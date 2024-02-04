@@ -1,11 +1,10 @@
 const roles = {
-    Admin:'Admin',
-    User:'User',
+    Admin: 'Admin',
+    User: 'User',
 }
 
-const  endPoint = {
-    create:[roles.User],
-
+const endPoint = {
+    create: [roles.User],
 }
 
 export default endPoint;
