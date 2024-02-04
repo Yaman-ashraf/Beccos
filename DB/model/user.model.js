@@ -1,53 +1,54 @@
-import mongoose, { Schema, model, Types } from 'mongoose'
-
+import mongoose , {Schema,model} from 'mongoose'
 const userSchema = new Schema({
-    name: {
-        type: String,
-        required: true,
-        unique: true,
+    name:{
+        type:String,
+        required:true,
+        unique:true,
     },
-    image: {
-        type: Object,
-        // required: true,
+    email:{
+        type:String,
+        required:true,
+        unique:true,
     },
-    email: {
-        type: String,
-        required: true,
-        unique: true,
+    phone:{
+        type:String,
     },
-    phone: {
-        type: String,
-        required: true,
-        unique: true,
+    password:{
+        type:String,
+        required:true,
     },
-    password: {
-        type: String,
-        required: true,
+    confirmEmail:{
+        type:Boolean,
+        default:false,
     },
-    confirmEmail: {
-        type: Boolean,
-        default: false,
+    image:{
+        type:Object,
     },
-    role: {
-        type: String,
-        default: 'User',
-        enum: ['User', 'Admin'],
+    role:{
+        type:String,
+        default:'User',
+        enum:['User','Admin'],
     },
-    status: {
-        type: String,
-        default: 'Active',
-        enum: ['Active', 'Not_Active'],
+    status:{
+        type:String,
+        default:'Active',
+        enum:['Active','Not_Active'],
     },
-    address: {
-        type: String,
+    address:{
+        type:String,
     },
-    gender: {
-        type: String,
-        enum: ['Female', 'Male'],
+    gender:{
+        type:String,
+        enum:['Male','Female'],
+    },
+    sendCode:{
+        type:String,
+        default:null,
     }
-}, {
-    timestamps: true,//وينتا انضافت الصورة
+},{
+    timestamps:true,
 }
 );
-const userModel = mongoose.models.User || model('User', userSchema);//cat table
+
+const userModel = mongoose.models.User || model('User',userSchema);
 export default userModel;

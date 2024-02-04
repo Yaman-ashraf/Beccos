@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+/* .container{
+    width:calc( 100% - 320px);
+    margin:auto;
+} */
+/*
+@media screen and (max-width:1200px){
+
+    .container{
+        width:calc( 100% - 160px);
+    }
+}
+@media screen and (max-width:1060px){
+
+    .container{
+        width:calc( 100% - 100px);
+    }
+} */
+ul {
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+.row_custom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+:root{
+    --mainColor:#01B5B2;
+}
+.navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
+    color:#FFF;
+    font-weight: 500;
+}
+
+.navbar-nav .nav-link, .navbar-nav .nav-link.show {
+    color:#000;
+    font-size:20px;
+    font-weight: 500;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+#sendCode{
+    cursor: pointer;
+}
+
+.hide-auth{
+    display: none !important;
+}
+.colored-toast.swal2-icon-success {
+    background-color: #4caf50 !important;
+  }
+
+  .colored-toast.swal2-icon-error {
+    background-color: #f27474 !important;
+  }
+
+  .colored-toast.swal2-icon-warning {
+    background-color: #f8bb86 !important;
+  }
+
+  .colored-toast.swal2-icon-info {
+    background-color: #3fc3ee !important;
+  }
+
+  .colored-toast.swal2-icon-question {
+    background-color: #87adbd !important;
+  }
+
+  .colored-toast .swal2-title {
+    color: white;
+  }
+
+  .colored-toast .swal2-close {
+    color: white;
+  }
+
+  .colored-toast .swal2-html-container {
+    color: white;
+  }
+
+  .loader-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8); /* خلفية شفافة تغطي الصفحة */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* يظهر أعلى من جميع العناصر الأخرى */
+}
+
+.loader {
+    border: 4px solid #f3f3f3; /* لون الحدود الرئيسي */
+    border-top: 4px solid #3498db; /* لون الحدود العلوية */
+    border-radius: 50%; /* شكل دائري */
+    width: 50px; /* عرض */
+    height: 50px; /* ارتفاع */
+    animation: spin 1s linear infinite; /* تدوير بشكل لامتناهي */
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); } /* بداية التدوير */
+    100% { transform: rotate(360deg); } /* نهاية التدوير */
+}
+
+.footer-item nav{
+display: flex;
+flex-direction: column;
+gap:15px;
+flex-wrap: wrap;
+}

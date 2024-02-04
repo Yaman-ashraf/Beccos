@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.7.32/sweetalert2.min.css"
+        integrity="sha512-IScV5kvJo+TIPbxENerxZcEpu9VrLUGh1qYWv6Z9aylhxWE4k4Fch3CHl0IYYmN+jrnWQBPlpoTVoWfSMakoKA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+
+<body>
+    <div class="overlay hide-overlay" id="overlay"></div>
+    <header>
+        <div class="container">
+            <div class="row_custom">
+                <select>
+                    <option>Browse catagory</option>
+                </select>
+                <!-- button -->
+
+                <nav>
+                    <a href="index.html" class="active">Home</a>
+                    <a href="#">About</a>
+                    <a href="products.html">Products</a>
+                    <a href="cart.html">Cart</a>
+                    <a href="contact.html">Contact us</a>
+
+                </nav>
+
+                <div class="auth-buttons">
+                    <a class="loginBtn">log in</a>
+                    <a class="registerBtn">Sign up</a>
+                </div>
+
+                <div class="after-auth-buttons hide-auth">
+                    <a href="profile.html" id="name">welcome <span class="userName"></span></a>
+                    <a onclick="logout()">logout</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+
+
+
+    <!-- Slider main container -->
+    <div class="header">
+
+
+        <div class="swiper ">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper ">
+                <!-- Slides -->
+
+
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- If we need scrollbar -->
+            <div class="swiper-scrollbar"></div>
+        </div>
+
+    </div>
+
+    <main>
+        <section class="categories">
+            <div class="container">
+                <h2>Categories</h2>
+
+                <div class="swiper categories-swiper">
+                    <!-- Additional required wrapper -->
+
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-wrapper">
+
+
+
+                        <!-- If we need scrollbar -->
+                    </div>
+                </div>
+                </div>
+        </section>
+
+        <section class="testimonials">
+            <div class="container">
+                <h2>What our beloved <span class="testimonial-keyword">users</span>
+                    say about us</h2>
+                <div class="row_custom">
+
+
+
+                </div>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="container">
+                <div class="row_custom">
+                    <div class="feature">
+                        <img src="assets/img/feature//feature_one.svg" />
+                        <h2>Quality Product</h2>
+                    </div>
+
+                    <div class="feature">
+                        <img src="assets/img/feature//feature_two.svg" />
+                        <h2>Free Shipping</h2>
+                    </div>
+
+                    <div class="feature">
+                        <img src="assets/img/feature//feature_three.svg" />
+                        <h2>14-Day Return</h2>
+                    </div>
+
+                    <div class="feature">
+                        <img src="assets/img/feature//feature_four.svg" />
+                        <h2>24/7 Support</h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="products">
+            <h2>Trency Products</h2>
+            <div class="container">
+                <div class="row_custom">
+
+                </div>
+            </div>
+
+        </section>
+
+        <section class="sale">
+            <img src="assets/img/public/sale.png" />
+        </section>
+
+        <section class="brands">
+            <h2>Top Brands Deal</h2>
+            <p>Up To 60% Off On Brands</p>
+            <div class="container">
+                <div class="row_custom">
+                    <div class="brand">
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="subscribe">
+            <div class="container">
+                <div class="row_custom">
+                    <p>Subscribe to Our Newsletter - get a $20 Coupon for your first order! </p>
+                    <div class="subscript-input">
+                        <input type="email" placeholder="Enter your email address" />
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                            <path
+                                d="M7.11313 10.0676C6.83359 10.3095 6.43028 10.3445 6.11329 10.1543L1.28996 7.2603C0.663294 6.88431 0.766251 5.94641 1.45956 5.71531L16.2179 0.795863C16.8866 0.572959 17.5228 1.20915 17.2999 1.87787L12.3804 16.6362C12.1493 17.3295 11.2114 17.4325 10.8354 16.8058L7.94145 11.9825C7.75125 11.6655 7.78621 11.2622 8.02812 10.9826L12.3583 5.97872C12.4972 5.81823 12.2775 5.59853 12.117 5.73741L7.11313 10.0676Z"
+                                fill="white" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="row_custom">
+
+                <div class="left-side">
+                    <img src="assets/img/public/footer_logo.svg" />
+                    <p>A one-stop digital destination for women and children, offering a seamless shopping experience
+                        for the whole family.</p>
+                </div>
+                <div class="right-side">
+                    <div class="footer-item">
+                        <h2>Home</h2>
+                        <nav>
+                            <a href="#">About</a>
+                            <a href="#">Products</a>
+                            <a href="#">The Cart</a>
+                            <a href="contact.html">Contact us</a>
+                            <a href="#">Review & Evaluation</a>
+                        </nav>
+                    </div>
+
+                    <div class="footer-item">
+                        <h2>Help & support</h2>
+                        <nav>
+                            <a href="#">Shipping Info</a>
+                            <a href="#">Returns</a>
+                            <a href="#">Refund</a>
+                            <a href="#">Payment & Taxes</a>
+                        </nav>
+                    </div>
+
+                    <div class="footer-item">
+                        <h2>Subscribe to Our Newsletter</h2>
+                        <input type="email" placeholder="Your Email" />
+                        <button class="subscribe_button">Subscribe</button>
+                    </div>
+
+                    <div class="footer-item">
+                        <button class="footer-cart">The Cart</button>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+                            <path
+                                d="M4.50436 7.40246L1.26172 4.15982L2.67593 2.74561L5.91857 5.98825H21.1603C21.7126 5.98825 22.1603 6.43596 22.1603 6.98825C22.1603 7.08557 22.1461 7.18237 22.1182 7.27559L19.7182 15.2756C19.5913 15.6985 19.2019 15.9882 18.7603 15.9882H6.50436V17.9882H17.5044V19.9882H5.50436C4.95207 19.9882 4.50436 19.5405 4.50436 18.9882V7.40246ZM6.50436 7.98825V13.9882H18.0163L19.8163 7.98825H6.50436ZM6.00436 23.9882C5.17593 23.9882 4.50436 23.3166 4.50436 22.4882C4.50436 21.6598 5.17593 20.9882 6.00436 20.9882C6.83279 20.9882 7.50436 21.6598 7.50436 22.4882C7.50436 23.3166 6.83279 23.9882 6.00436 23.9882ZM18.0044 23.9882C17.1759 23.9882 16.5044 23.3166 16.5044 22.4882C16.5044 21.6598 17.1759 20.9882 18.0044 20.9882C18.8328 20.9882 19.5044 21.6598 19.5044 22.4882C19.5044 23.3166 18.8328 23.9882 18.0044 23.9882Z"
+                                fill="#161326" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div id="loginModal" class="modal hide-modal">
+        <div class="modal-info">
+            <div class="modal-header">
+                <button id="closeModal" class="closeModal">
+                    <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g filter="url(#filter0_d_1_5858)">
+                            <path
+                                d="M3.34763 15.8594L0.707 13.3125L12.8789 0.890625L15.5195 3.45312L3.34763 15.8594ZM12.8945 15.8594L0.722625 3.45312L3.36325 0.890625L15.5351 13.3125L12.8945 15.8594Z"
+                                fill="CurrentColor" />
+                        </g>
+                        <defs>
+                            <filter id="filter0_d_1_5858" x="0.707031" y="0.890625" width="14.8281" height="15.9688"
+                                filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                <feColorMatrix in="SourceAlpha" type="matrix"
+                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                                <feOffset dy="1" />
+                                <feComposite in2="hardAlpha" operator="out" />
+                                <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0" />
+                                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1_5858" />
+                                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1_5858"
+                                    result="shape" />
+                            </filter>
+                        </defs>
+                    </svg>
+                </button>
+            </div>
+            <div class="modal-content">
+                <div class="form-header">
+                    <h2>Log in</h2>
+                </div>
+                <form id="loginform">
+                    <div class="group">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="27" height="24" viewBox="0 0 27 24" fill="none">
+                            <path
+                                d="M1.35 0H25.65C26.3956 0 27 0.59696 27 1.33333V22.6667C27 23.4031 26.3956 24 25.65 24H1.35C0.604422 24 0 23.4031 0 22.6667V1.33333C0 0.59696 0.604422 0 1.35 0ZM13.5818 11.5772L4.92375 4.31693L3.17625 6.34973L13.5987 15.0895L23.8334 6.34155L22.0666 4.32512L13.5818 11.5772Z"
+                                fill="#9C9C9C" />
+                        </svg>
+                        <input type="text" placeholder="Email" id="login_email" />
+                    </div>
+                    <div class="group">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 35 35" fill="none">
+                            <path
+                                d="M26.25 11.6667H29.1667C29.9721 11.6667 30.625 12.3196 30.625 13.125V30.625C30.625 31.4305 29.9721 32.0834 29.1667 32.0834H5.83333C5.02793 32.0834 4.375 31.4305 4.375 30.625V13.125C4.375 12.3196 5.02793 11.6667 5.83333 11.6667H8.75V10.2084C8.75 5.37588 12.6675 1.45837 17.5 1.45837C22.3325 1.45837 26.25 5.37588 26.25 10.2084V11.6667ZM16.0417 22.9431V26.25H18.9583V22.9431C19.8301 22.4388 20.4167 21.4963 20.4167 20.4167C20.4167 18.8058 19.1109 17.5 17.5 17.5C15.8891 17.5 14.5833 18.8058 14.5833 20.4167C14.5833 21.4963 15.1699 22.4388 16.0417 22.9431ZM23.3333 11.6667V10.2084C23.3333 6.98671 20.7216 4.37504 17.5 4.37504C14.2783 4.37504 11.6667 6.98671 11.6667 10.2084V11.6667H23.3333Z"
+                                fill="#9C9C9C" />
+                        </svg>
+                        <input type="password" placeholder="password" id="login_password" />
+                    </div>
+                    <button class="auth-btn" type="submit">Log in</button>
+                    <a href="#" class="forgot-password">did you forgoet your password ?</a>
+                    <a id="sendCode"> forget password ?</a>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id="registerModal" class="modal hide-modal">
+        <div class="modal-info">
+            <div class="modal-header">
+                <button id="closeModal" class="closeModal">
+                    <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g filter="url(#filter0_d_1_5858)">
+                            <path
+                                d="M3.34763 15.8594L0.707 13.3125L12.8789 0.890625L15.5195 3.45312L3.34763 15.8594ZM12.8945 15.8594L0.722625 3.45312L3.36325 0.890625L15.5351 13.3125L12.8945 15.8594Z"
+                                fill="#9C9C9C" />
+                        </g>
+                        <defs>
+                            <filter id="filter0_d_1_5858" x="0.707031" y="0.890625" width="14.8281" height="15.9688"
+                                filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                <feColorMatrix in="SourceAlpha" type="matrix"
+                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                                <feOffset dy="1" />
+                                <feComposite in2="hardAlpha" operator="out" />
+                                <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0" />
+                                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1_5858" />
+                                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1_5858"
+                                    result="shape" />
+                            </filter>
+                        </defs>
+                    </svg>
+                </button>
+            </div>
+            <div class="modal-content">
+                <div class="form-header">
+                    <h2>register</h2>
+                    <div class="divider"></div>
+                </div>
+
+                <form id="registerform">
+                    <div class="group">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 28" fill="none">
+                            <path
+                                d="M0 27.0976C0 21.5116 5.14872 16.9834 11.5 16.9834C17.8513 16.9834 23 21.5116 23 27.0976H0ZM11.5 15.7191C6.73469 15.7191 2.875 12.3245 2.875 8.13348C2.875 3.94242 6.73469 0.547852 11.5 0.547852C16.2653 0.547852 20.125 3.94242 20.125 8.13348C20.125 12.3245 16.2653 15.7191 11.5 15.7191Z"
+                                fill="#9C9C9C" />
+                        </svg>
+                        <!-- class -->
+                        <input type="text" placeholder="Username" id="register_name" />
+                    </div>
+                    <div class="divider"></div>
+
+                    <div class="group">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="27" height="24" viewBox="0 0 27 24" fill="none">
+                            <path
+                                d="M1.35 0H25.65C26.3956 0 27 0.59696 27 1.33333V22.6667C27 23.4031 26.3956 24 25.65 24H1.35C0.604422 24 0 23.4031 0 22.6667V1.33333C0 0.59696 0.604422 0 1.35 0ZM13.5818 11.5772L4.92375 4.31693L3.17625 6.34973L13.5987 15.0895L23.8334 6.34155L22.0666 4.32512L13.5818 11.5772Z"
+                                fill="#9C9C9C" />
+                        </svg>
+                        <input type="text" placeholder="Email" id="register_email" />
+                    </div>
+                    <div class="divider"></div>
+                    <div class="group">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 35 35" fill="none">
+                            <path
+                                d="M26.25 11.6667H29.1667C29.9721 11.6667 30.625 12.3196 30.625 13.125V30.625C30.625 31.4305 29.9721 32.0834 29.1667 32.0834H5.83333C5.02793 32.0834 4.375 31.4305 4.375 30.625V13.125C4.375 12.3196 5.02793 11.6667 5.83333 11.6667H8.75V10.2084C8.75 5.37588 12.6675 1.45837 17.5 1.45837C22.3325 1.45837 26.25 5.37588 26.25 10.2084V11.6667ZM16.0417 22.9431V26.25H18.9583V22.9431C19.8301 22.4388 20.4167 21.4963 20.4167 20.4167C20.4167 18.8058 19.1109 17.5 17.5 17.5C15.8891 17.5 14.5833 18.8058 14.5833 20.4167C14.5833 21.4963 15.1699 22.4388 16.0417 22.9431ZM23.3333 11.6667V10.2084C23.3333 6.98671 20.7216 4.37504 17.5 4.37504C14.2783 4.37504 11.6667 6.98671 11.6667 10.2084V11.6667H23.3333Z"
+                                fill="#9C9C9C" />
+                        </svg>
+                        <input type="password" placeholder="password" id="register_password" />
+                    </div>
+                    <div class="divider"></div>
+                    <button class="auth-btn" type="submit">register</button>
+
+
+
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id="sendCodeModal" class="modal hide-modal">
+        <div class="modal-info">
+            <div class="modal-header">
+                <button id="closeModal" class="closeModal">
+                    <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g filter="url(#filter0_d_1_5858)">
+                            <path
+                                d="M3.34763 15.8594L0.707 13.3125L12.8789 0.890625L15.5195 3.45312L3.34763 15.8594ZM12.8945 15.8594L0.722625 3.45312L3.36325 0.890625L15.5351 13.3125L12.8945 15.8594Z"
+                                fill="CurrentColor" />
+                        </g>
+                        <defs>
+                            <filter id="filter0_d_1_5858" x="0.707031" y="0.890625" width="14.8281" height="15.9688"
+                                filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                <feColorMatrix in="SourceAlpha" type="matrix"
+                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                                <feOffset dy="1" />
+                                <feComposite in2="hardAlpha" operator="out" />
+                                <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0" />
+                                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1_5858" />
+                                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1_5858"
+                                    result="shape" />
+                            </filter>
+                        </defs>
+                    </svg>
+                </button>
+            </div>
+            <div class="modal-content">
+                <div class="form-header">
+                    <h2>send code</h2>
+                </div>
+                <form id="sendCodeForm">
+                    <div class="group">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="27" height="24" viewBox="0 0 27 24" fill="none">
+                            <path
+                                d="M1.35 0H25.65C26.3956 0 27 0.59696 27 1.33333V22.6667C27 23.4031 26.3956 24 25.65 24H1.35C0.604422 24 0 23.4031 0 22.6667V1.33333C0 0.59696 0.604422 0 1.35 0ZM13.5818 11.5772L4.92375 4.31693L3.17625 6.34973L13.5987 15.0895L23.8334 6.34155L22.0666 4.32512L13.5818 11.5772Z"
+                                fill="#9C9C9C" />
+                        </svg>
+                        <input type="text" placeholder="Email" />
+                    </div>
+
+                    <button class="auth-btn" type="submit">send </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id="forgotPasswordModal" class="modal hide-modal">
+        <div class="modal-info">
+            <div class="modal-header">
+                <button id="closeModal" class="closeModal">
+                    <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g filter="url(#filter0_d_1_5858)">
+                            <path
+                                d="M3.34763 15.8594L0.707 13.3125L12.8789 0.890625L15.5195 3.45312L3.34763 15.8594ZM12.8945 15.8594L0.722625 3.45312L3.36325 0.890625L15.5351 13.3125L12.8945 15.8594Z"
+                                fill="#9C9C9C" />
+                        </g>
+                        <defs>
+                            <filter id="filter0_d_1_5858" x="0.707031" y="0.890625" width="14.8281" height="15.9688"
+                                filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                <feColorMatrix in="SourceAlpha" type="matrix"
+                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                                <feOffset dy="1" />
+                                <feComposite in2="hardAlpha" operator="out" />
+                                <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0" />
+                                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1_5858" />
+                                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1_5858"
+                                    result="shape" />
+                            </filter>
+                        </defs>
+                    </svg>
+                </button>
+            </div>
+            <div class="modal-content">
+                <div class="form-header">
+                    <h2>new password</h2>
+                    <div class="divider"></div>
+                </div>
+
+                <form id="forgotPasswordform">
+                    <div class="group">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 28" fill="none">
+                            <path
+                                d="M0 27.0976C0 21.5116 5.14872 16.9834 11.5 16.9834C17.8513 16.9834 23 21.5116 23 27.0976H0ZM11.5 15.7191C6.73469 15.7191 2.875 12.3245 2.875 8.13348C2.875 3.94242 6.73469 0.547852 11.5 0.547852C16.2653 0.547852 20.125 3.94242 20.125 8.13348C20.125 12.3245 16.2653 15.7191 11.5 15.7191Z"
+                                fill="#9C9C9C" />
+                        </svg>
+                        <!-- class -->
+                        <input type="text" placeholder="Code" />
+                    </div>
+                    <div class="divider"></div>
+
+
+                    <div class="group">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 35 35" fill="none">
+                            <path
+                                d="M26.25 11.6667H29.1667C29.9721 11.6667 30.625 12.3196 30.625 13.125V30.625C30.625 31.4305 29.9721 32.0834 29.1667 32.0834H5.83333C5.02793 32.0834 4.375 31.4305 4.375 30.625V13.125C4.375 12.3196 5.02793 11.6667 5.83333 11.6667H8.75V10.2084C8.75 5.37588 12.6675 1.45837 17.5 1.45837C22.3325 1.45837 26.25 5.37588 26.25 10.2084V11.6667ZM16.0417 22.9431V26.25H18.9583V22.9431C19.8301 22.4388 20.4167 21.4963 20.4167 20.4167C20.4167 18.8058 19.1109 17.5 17.5 17.5C15.8891 17.5 14.5833 18.8058 14.5833 20.4167C14.5833 21.4963 15.1699 22.4388 16.0417 22.9431ZM23.3333 11.6667V10.2084C23.3333 6.98671 20.7216 4.37504 17.5 4.37504C14.2783 4.37504 11.6667 6.98671 11.6667 10.2084V11.6667H23.3333Z"
+                                fill="#9C9C9C" />
+                        </svg>
+                        <input type="password" placeholder="password" id="register_password" />
+                    </div>
+                    <div class="divider"></div>
+                    <button class="auth-btn" type="submit">update</button>
+
+
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.7.32/sweetalert2.min.js"
+    integrity="sha512-3PL7jW3xI1EjF2Hfqwv5u6nKG/BnUbWytnJDhsY/q5CbIB5XzoHNhJvgmFeVD7xgC9DbKDm+gPP9uDAAfLAZUA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="assets/js/auth.js"></script>
+<script src="assets/js/home.js"></script>
+<script src="assets/js/products.js"></script>
+<script src="assets/js/custom.js"></script>
+
+
+
+</html>

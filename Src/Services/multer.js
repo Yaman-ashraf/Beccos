@@ -1,22 +1,23 @@
-import multer from 'multer';
+import multer from 'multer'
 
 export const fileValidation = {
-    image: ['image/jpeg', 'image/png', 'image / webp'],
-    file: ['aplication/pdf'],
+    image:['image/jpeg','image/png','image/webp','image/svg+xml'],
+    file:['application/pdf'],
+    excel:['application/vnd.openxmlformats-officedocument.spreadsheetml.sheet']
+
 }
 
-
-function fileUpload(customValidation = []) {
-
-    const storage = multer.diskStorage({});//place where i store the pic, not in my lab
-    function fileFilter(req, file, cb) {//callBack
-        if (customValidation.includes(file.mimetype)) {
-            cb(null, true);
-        } else {
-            cb("invalid format", false);
+function fileUpload(customValidation =[]){
+    const storage = multer.diskStorage({});
+    function fileFilter(req,file,cb){
+        if(customValidation.includes(file.mimetype)){
+            cb(null,true);
+        }else{
+            cb("invalid format",false);
         }
     }
-    const upload = multer({ fileFilter, storage });
+    const upload = multer({fileFilter,storage});
     return upload;
 }
+
 export default fileUpload;

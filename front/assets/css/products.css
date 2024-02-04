@@ -1,0 +1,130 @@
+/* تنسيق حاوية الفلتر */
+.product-filter {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* تنسيق عناوين القائمة */
+.product-filter h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* تنسيق زر الفلتر */
+.product-filter .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    font-size: 16px;
+}
+
+/* تنسيق القائمة والأزرار */
+.product-filter form {
+    margin-bottom: 20px;
+}
+
+/* تنسيق عناصر القائمة */
+.product-filter ul.categories ul.brands {
+    list-style: none;
+    padding: 0;
+}
+
+.product-filter ul.categories ul.brands li {
+    margin-bottom: 5px;
+}
+
+/* تنسيق حاوية القائمة */
+.product-filter ul.categories ul.brands li label {
+    margin-left: 5px;
+}
+
+/* تنسيق الخانات النصية للأسعار */
+.product-filter .checkbox input[type="text"] {
+    width: 80px;
+    margin-right: 5px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* تنسيق أزرار الإرسال */
+.product-filter input[type="submit"] {
+    background-color: #01B5B2 !important;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* تنسيق خانات الإدخال */
+.product-filter input[type="text"] {
+    width: 100px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+/* تنسيق أزرار الإرسال */
+.product-filter input[type="submit"] {
+    background-color: #01B5B2 !important;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* تنسيق الأزرار عند التحويل إلى الحالة النشطة */
+.product-filter input[type="submit"]:hover {
+    background-color: #008f8b !important;
+}
+
+/* تنسيق الأزرار عند التحويل إلى الحالة النشطة */
+.product-filter input[type="submit"]:active {
+    background-color: #005d5a !important;
+}
+
+/* تنسيق حاوية الفلتر بظل */
+.shadow-lg {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+/* تنسيق أزرار الراديو */
+.product-filter input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 3px solid #ccc;
+    border-radius: 50%;
+    outline: none;
+    margin-right: 5px;
+}
+
+/* تحديد شكل زر الراديو عند التحديد */
+.product-filter input[type="radio"]:checked {
+    background-color: #01B5B2;
+    border-color: #01B5B2;
+}
+
+.priceSubmit {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.priceSubmit .checkbox {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+}
+
+.priceSubmit .checkbox li {
+    display: flex;
+    gap: 7px;
+}

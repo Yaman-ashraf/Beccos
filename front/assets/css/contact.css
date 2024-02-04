@@ -1,0 +1,93 @@
+.contact {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+}
+
+.contact .row_custom {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+
+
+.form-side {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.image-side {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; /* تحديد محاذاة العناصر للجزء العلوي */
+    gap: 18px;
+}
+
+form {
+    background-color: #fff;
+    padding: 36px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.input-group {
+    width: 45%;
+}
+
+.input-group input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    background-color: var(--mainColor);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 33%;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* إضافة مسافة بين الصورة والبيانات الاضافية */
+.image-side img {
+    width:100%;
+    margin-top: 40px;
+}
+
+.contact-info {
+    display: flex;
+    gap: 17px;
+}
+.contact-info .data {
+    display: flex;
+    align-items: center;
+    gap:12px;
+}
+.contact-info .row_custom{
+    gap:10px;
+}
+contact-info .data svg {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px; /* تضبيط المسافة بين الأيقونات والفقرات */
+}
+
+
+
+
+
