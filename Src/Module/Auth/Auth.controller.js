@@ -18,6 +18,7 @@ export const signup = async (req,res)=>{
         const token = jwt.sign({email},process.env.SIGNUPTOKEN);
         const link = `${req.protocol}://${req.headers.host}/auth/${token}`
 
+        
         const html = `
         <!DOCTYPE html>
 <html lang="en">
