@@ -8,7 +8,7 @@ const login = async(e)=>{
     const email = elements["email"].value;
     const password = elements["password"].value;
     try{
-        const {data} = await axios.post(`https://beccos.vercel.app/auth/signin`,{email,password});
+        const {data} = await axios.post(`https://beccos.onrender.com/auth/signin`,{email,password});
         if(data.message=='success'){
             localStorage.setItem("adminToken",data.token);
             location.href='./../../src/home/index.html';

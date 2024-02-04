@@ -37,14 +37,14 @@ createProductExcel?.addEventListener("submit", function (e) {
   });
 const getProducts = async () => {
   const token = localStorage.getItem("adminToken");
-  const { data } = await axios.get(`https://beccos.vercel.app/products`, {
+  const { data } = await axios.get(`https://beccos.onrender.com/products`, {
     headers: { authorization: `BECCOS__${token}` },
   });
 
   return data.products;
 };
 const getProduct = async (id) => {
-  const { data } = await axios.get(`https://beccos.vercel.app/products/${id}`);
+  const { data } = await axios.get(`https://beccos.onrender.com/products/${id}`);
   return data.product;
 };
 
@@ -126,7 +126,7 @@ const createProduct = async (e) => {
   const token = localStorage.getItem("adminToken");
   console.log(token);
   try {
-    const { data } = await axios.post(`https://beccos.vercel.app/products`,
+    const { data } = await axios.post(`https://beccos.onrender.com/products`,
       formData,
       { headers: { authorization: `BECCOS__${token}` } }
     );
@@ -145,7 +145,7 @@ const createProductWithExcel= async(e)=>{
     const token = localStorage.getItem("adminToken");
     formData.append("file", elements["file"].files[0]);
 
-    const {data} = await axios.post(`https://beccos.vercel.app/products/createWithExcel`,formData,{
+    const {data} = await axios.post(`https://beccos.onrender.com/products/createWithExcel`,formData,{
         headers:{authorization:`BECCOS__${token}`}
     })
 
@@ -175,7 +175,7 @@ const updateProduct = async (e) => {
   const token = localStorage.getItem("adminToken");
   try {
     const { data } = await axios.put(
-      `https://beccos.vercel.app/products/${id}`,
+      `https://beccos.onrender.com/products/${id}`,
      formData,
       { headers: { authorization: `BECCOS__${token}` } }
     );
@@ -212,7 +212,7 @@ const deleteProduct = async (id, e) => {
       if (result.isConfirmed) {
         const token = localStorage.getItem("adminToken");
         const { data } = await axios.delete(
-          `https://beccos.vercel.app/products/${id}`,
+          `https://beccos.onrender.com/products/${id}`,
           {
             headers: { authorization: `BECCOS__${token}` },
           }
@@ -233,11 +233,11 @@ const deleteProduct = async (id, e) => {
 };
 
 const getCategories = async () => {
-  const { data } = await axios.get("https://beccos.vercel.app/categories");
+  const { data } = await axios.get("https://beccos.onrender.com/categories");
   return data.categories;
 };
 const getBrands = async () => {
-  const { data } = await axios.get("https://beccos.vercel.app/brand");
+  const { data } = await axios.get("https://beccos.onrender.com/brand");
   return data.brands;
 };
 

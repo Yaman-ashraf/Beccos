@@ -1,4 +1,4 @@
-const ApiURL = 'https://beccos.vercel.app';
+const ApiURL = 'https://beccos.onrender.com';
 
 const createProductForm = document.querySelector("#creactProductForm");
 
@@ -30,7 +30,7 @@ createProductForm?.addEventListener("submit", async function (e) {
   const token = localStorage.getItem("token");
 
   const { data } = await axios.post(
-    `https://beccos.vercel.app/products`,
+    `https://beccos.onrender.com/products`,
     formData,
     { headers: { authorization: `BECCOS__${token}` } }
   );
@@ -55,7 +55,7 @@ createProductForm?.addEventListener("submit", async function (e) {
   }
 });
 const getCategories = async () => {
-  const { data } = await axios.get(`https://beccos.vercel.app/categories`);
+  const { data } = await axios.get(`https://beccos.onrender.com/categories`);
   return data.categoies;
 };
 const displayCategories = async () => {
@@ -73,7 +73,7 @@ displayCategories();
 
 const getProducts = async (page) => {
   const { data } = await axios.get(
-    `https://beccos.vercel.app/products?page=${page}`
+    `https://beccos.onrender.com/products?page=${page}`
   );
   return data;
 };

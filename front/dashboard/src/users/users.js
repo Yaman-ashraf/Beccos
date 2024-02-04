@@ -34,14 +34,14 @@ editUserForm?.addEventListener("submit", function (e) {
 
 const getUsers = async () => {
   const token = localStorage.getItem("adminToken");
-  const { data } = await axios.get(`https://beccos.vercel.app/user`, {
+  const { data } = await axios.get(`https://beccos.onrender.com/user`, {
     headers: { authorization: `BECCOS__${token}` },
   });
 
   return data.users;
 };
 const getUser = async (id) => {
-  const { data } = await axios.get(`https://beccos.vercel.app/user/${id}`);
+  const { data } = await axios.get(`https://beccos.onrender.com/user/${id}`);
   return data.user;
 };
 
@@ -83,7 +83,7 @@ const createAdmin = async (e) => {
   const token = localStorage.getItem("adminToken");
   try {
     const { data } = await axios.post(
-      `https://beccos.vercel.app/auth/signup`,
+      `https://beccos.onrender.com/auth/signup`,
       user,
       { headers: { authorization: `BECCOS__${token}` } }
     );
@@ -109,7 +109,7 @@ const updateUser = async (e) => {
   const token = localStorage.getItem("adminToken");
   try {
     const { data } = await axios.patch(
-      `https://beccos.vercel.app/user/${id}`,
+      `https://beccos.onrender.com/user/${id}`,
       user,
       { headers: { authorization: `BECCOS__${token}` } }
     );
@@ -138,7 +138,7 @@ const editItem = async () => {
 
 
 const getBrands = async () => {
-  const { data } = await axios.get("https://beccos.vercel.app/brand");
+  const { data } = await axios.get("https://beccos.onrender.com/brand");
   return data.brands;
 };
 

@@ -50,7 +50,7 @@ confirmPayment.onsubmit = async function(e){
     const shipping = elements['delevary'].value;
     const token = localStorage.getItem("userToken");
 
-    const {data} = await axios.post(`https://beccos.vercel.app/order`,
+    const {data} = await axios.post(`https://beccos.onrender.com/order`,
     {
         phone,address,shipping
     },

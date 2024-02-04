@@ -9,7 +9,7 @@ const login = async()=>{
     const password = document.querySelector("#password").value;
 
     try{
-        const {data} = await axios.post(`https://beccos.vercel.app/auth/signin`,{email,password});
+        const {data} = await axios.post(`https://beccos.onrender.com/auth/signin`,{email,password});
 
         if(data.message=='success'){
             localStorage.setItem("token",data.token);

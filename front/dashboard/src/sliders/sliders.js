@@ -34,14 +34,14 @@ editSliderForm?.addEventListener("submit", function (e) {
 
 const getSliders = async () => {
   const token = localStorage.getItem("adminToken");
-  const { data } = await axios.get(`https://beccos.vercel.app/sliders`, {
+  const { data } = await axios.get(`https://beccos.onrender.com/sliders`, {
     headers: { authorization: `BECCOS__${token}` },
   });
 
   return data.sliders;
 };
 const getSlider = async (id) => {
-  const { data } = await axios.get(`https://beccos.vercel.app/sliders/${id}`);
+  const { data } = await axios.get(`https://beccos.onrender.com/sliders/${id}`);
   return data.slider;
 };
 
@@ -80,7 +80,7 @@ const createSlider = async (e) => {
   const token = localStorage.getItem("adminToken");
   try {
     const { data } = await axios.post(
-      `https://beccos.vercel.app/sliders`,
+      `https://beccos.onrender.com/sliders`,
       formData,
       { headers: { authorization: `BECCOS__${token}` } }
     );
@@ -103,7 +103,7 @@ const updateSlider = async (e) => {
   const token = localStorage.getItem("adminToken");
   try {
     const { data } = await axios.put(
-      `https://beccos.vercel.app/sliders/${id}`,
+      `https://beccos.onrender.com/sliders/${id}`,
      formData,
       { headers: { authorization: `BECCOS__${token}` } }
     );
@@ -140,7 +140,7 @@ const deleteSlider = async (id, e) => {
       if (result.isConfirmed) {
         const token = localStorage.getItem("adminToken");
         const { data } = await axios.delete(
-          `https://beccos.vercel.app/sliders/${id}`,
+          `https://beccos.onrender.com/sliders/${id}`,
           {
             headers: { authorization: `BECCOS__${token}` },
           }
@@ -161,11 +161,11 @@ const deleteSlider = async (id, e) => {
 };
 
 const getCategories = async () => {
-  const { data } = await axios.get("https://beccos.vercel.app/categories");
+  const { data } = await axios.get("https://beccos.onrender.com/categories");
   return data.categories;
 };
 const getBrands = async () => {
-  const { data } = await axios.get("https://beccos.vercel.app/brand");
+  const { data } = await axios.get("https://beccos.onrender.com/brand");
   return data.brands;
 };
 

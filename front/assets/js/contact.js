@@ -11,7 +11,7 @@ contactForm.onsubmit = async function(e){
 
 
     }
-    const {data} = await axios.post(`https://beccos.vercel.app/user/contact`,contact);
+    const {data} = await axios.post(`https://beccos.onrender.com/user/contact`,contact);
     if(data.message=='success'){
         showToast({msg:'email sent successfully'});
     }

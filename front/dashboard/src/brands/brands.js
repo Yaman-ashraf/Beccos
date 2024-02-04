@@ -34,13 +34,13 @@ editBrandForm?.addEventListener("submit", function (e) {
 
 const getBrands = async () => {
   const token = localStorage.getItem("adminToken");
-  const { data } = await axios.get(`https://beccos.vercel.app/brand`, {
+  const { data } = await axios.get(`https://beccos.onrender.com/brand`, {
     headers: { authorization: `BECCOS__${token}` },
   });
   return data.brands;
 };
 const getBrand = async (id) => {
-  const { data } = await axios.get(`https://beccos.vercel.app/brand/details/${id}`);
+  const { data } = await axios.get(`https://beccos.onrender.com/brand/details/${id}`);
   return data.brand;
 };
 
@@ -78,7 +78,7 @@ const createBrand = async (e) => {
   const token = localStorage.getItem("adminToken");
   try {
     const { data } = await axios.post(
-      `https://beccos.vercel.app/brand`,
+      `https://beccos.onrender.com/brand`,
       formData,
       { headers: { authorization: `BECCOS__${token}` } }
     );
@@ -101,7 +101,7 @@ const updateBrand = async (e) => {
   const token = localStorage.getItem("adminToken");
   try {
     const { data } = await axios.put(
-      `https://beccos.vercel.app/brand/${id}`,
+      `https://beccos.onrender.com/brand/${id}`,
      formData,
       { headers: { authorization: `BECCOS__${token}` } }
     );
@@ -134,7 +134,7 @@ const deleteBrand= async (id, e) => {
       if (result.isConfirmed) {
         const token = localStorage.getItem("adminToken");
         const { data } = await axios.delete(
-          `https://beccos.vercel.app/brand/${id}`,
+          `https://beccos.onrender.com/brand/${id}`,
           {
             headers: { authorization: `BECCOS__${token}` },
           }

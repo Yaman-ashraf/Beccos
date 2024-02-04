@@ -55,7 +55,7 @@ const runDataTable = ({excelTitle='Title',pdfTitle='Title',printTitle='Title'}) 
   };
 const topSellingProducts = async()=>{
     const token = localStorage.getItem('adminToken');
-    const {data} = await axios.get(`https://beccos.vercel.app/order/getSellingProduct`,
+    const {data} = await axios.get(`https://beccos.onrender.com/order/getSellingProduct`,
     {
         headers:{authorization:`BECCOS__${token}`}
     });
@@ -99,7 +99,7 @@ const displayProducts = async () => {
   const usersOrdersReport = async () => {
     try {
         const token = localStorage.getItem('adminToken');
-        const { data } = await axios.get(`https://beccos.vercel.app/order/getUsersOrdersReport`, {
+        const { data } = await axios.get(`https://beccos.onrender.com/order/getUsersOrdersReport`, {
             headers: { authorization: `BECCOS__${token}` }
         });
 

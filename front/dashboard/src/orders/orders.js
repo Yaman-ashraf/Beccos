@@ -34,7 +34,7 @@ editOrderForm?.addEventListener("submit", function (e) {
 
 const getOrders = async () => {
     const token = localStorage.getItem("adminToken");
-    const { data } = await axios.get(`https://beccos.vercel.app/order/allOrder`,
+    const { data } = await axios.get(`https://beccos.onrender.com/order/allOrder`,
         {
             headers: { authorization: `BECCOS__${token}` }
         });
@@ -44,7 +44,7 @@ const getOrders = async () => {
 const getOrder = async (id) => {
     const token = localStorage.getItem("adminToken");
 
-    const { data } = await axios.get(`https://beccos.vercel.app/order/details/${id}`, {
+    const { data } = await axios.get(`https://beccos.onrender.com/order/details/${id}`, {
         headers: { authorization: `BECCOS__${token}` }
     });
     return data.order
@@ -82,7 +82,7 @@ const changeShippngCost = async (e,id)=>{
 e.preventDefault();
 const shipping = document.querySelector(".shippingCostValue").value;
 const token = localStorage.getItem('adminToken')
-const {data} = await axios.patch(`https://beccos.vercel.app/order/updateShipping/${id}`,{shipping},
+const {data} = await axios.patch(`https://beccos.onrender.com/order/updateShipping/${id}`,{shipping},
 {
     headers:{authorization:`BECCOS__${token}`}
 });
@@ -97,7 +97,7 @@ const updateOrder = async (e) => {
     const token = localStorage.getItem("adminToken");
     try {
         const { data } = await axios.patch(
-            `https://beccos.vercel.app/order/changeStatus/${id}`,
+            `https://beccos.onrender.com/order/changeStatus/${id}`,
             { status },
             { headers: { authorization: `BECCOS__${token}` } }
         );

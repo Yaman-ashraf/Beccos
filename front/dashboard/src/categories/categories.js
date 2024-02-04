@@ -33,13 +33,13 @@ editCategoryForm?.addEventListener("submit", function (e) {
   });
 
 const getCategories = async () => {
-  const { data } = await axios.get(`https://beccos.vercel.app/categories`);
+  const { data } = await axios.get(`https://beccos.onrender.com/categories`);
 
   return data.categories;
 };
 const getCategory = async(id)=>{
 
-    const {data} = await axios.get(`https://beccos.vercel.app/categories/${id}`);
+    const {data} = await axios.get(`https://beccos.onrender.com/categories/${id}`);
     return data.category
 };
 
@@ -74,7 +74,7 @@ const createCategory = async (e) => {
   const token = localStorage.getItem("adminToken");
   try {
     const { data } = await axios.post(
-      `https://beccos.vercel.app/categories`,
+      `https://beccos.onrender.com/categories`,
       { name },
       { headers: { authorization: `BECCOS__${token}` } }
     );
@@ -93,7 +93,7 @@ const updateCategory = async (e) => {
     const token = localStorage.getItem("adminToken");
     try {
       const { data } = await axios.patch(
-        `https://beccos.vercel.app/categories/${id}`,
+        `https://beccos.onrender.com/categories/${id}`,
         { name,status },
         { headers: { authorization: `BECCOS__${token}` } }
       );
@@ -130,7 +130,7 @@ const deleteCategory = async (id, e) => {
       if (result.isConfirmed) {
         const token = localStorage.getItem("adminToken");
         const { data } = await axios.delete(
-          `https://beccos.vercel.app/categories/${id}`,
+          `https://beccos.onrender.com/categories/${id}`,
           {
             headers: { authorization: `BECCOS__${token}` },
           }
